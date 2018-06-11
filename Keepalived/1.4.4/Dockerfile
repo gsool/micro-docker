@@ -6,4 +6,4 @@ RUN set -x && apk add --no-cache tzdata \
 	&& ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
 	&& apk add --no-cache mailx && apk add --no-cache keepalived
 
-ENTRYPOINT ["keepalived", "-l -n -D -f", "/etc/keepalived/keepalived.conf"]
+ENTRYPOINT ["keepalived", "-f -P -l -D -n", "/etc/keepalived/keepalived.conf"]
