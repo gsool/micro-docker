@@ -8,4 +8,4 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositor
 	&& apk add --no-cache s-nail && apk add --no-cache keepalived && apk add --no-cache bash \
 	&& ln -sf /bin/bash /bin/sh
 
-ENTRYPOINT ["keepalived", "-P", "-D", "-l", "-n"]
+ENTRYPOINT ["keepalived", "-P", "-l", "-n"]
