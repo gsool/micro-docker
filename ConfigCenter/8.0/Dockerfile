@@ -1,6 +1,6 @@
 FROM recallcode/jdk:8u172
 
-RUN mkdir -p /opt/config-center/bin && mkdir -p /opt/config-center/conf && mkdir -p /opt/config-center/lib && mkdir -p /opt/config-center/logs
+RUN mkdir -p /opt/config-center/bin && mkdir -p /opt/config-center/conf && mkdir -p /opt/config-center/lib
 
 COPY ./bin /opt/config-center/bin
 
