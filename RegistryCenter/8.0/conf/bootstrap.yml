@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: EOS_Platform_Registry_Center
+  pid:
+    file: '${AW_COMPONENT_HOME:.}/bin/application.pid'
+
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: true
+
+management:
+  port: 18081
+
+security:
+  basic:
+    enabled: true
+    path:
+    - ${endpoints.shutdown.path:/shutdown}
+  user:
+    name: sysadmin
+    password: 000000
+ 
+logging:
+  pattern:
+    console: '[${spring.application.name}][%date][%level][%logger:%L]  %msg%n'
+    file: '[${spring.application.name}][%date][%level][%logger:%L]  %msg%n'
+  file: '${AW_COMPONENT_HOME:.}/logs/application.log'
