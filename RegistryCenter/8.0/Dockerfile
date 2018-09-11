@@ -8,4 +8,6 @@ COPY ./conf /opt/registry-center/conf
 
 COPY ./lib /opt/registry-center/lib
 
+RUN chmod +x /opt/registry-center/bin/startup.sh
+
 ENTRYPOINT ["/opt/registry-center/bin/startup.sh"]
