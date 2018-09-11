@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:8u172b11_jdk_unlimited
+FROM anapsix/alpine-java:8u181b13_jdk_unlimited
 
 ENV TZ=Asia/Shanghai
 
